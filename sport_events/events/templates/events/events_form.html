@@ -9,7 +9,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <a href="/" style="text-align: center; text-decoration: none;"><h1>На главную</h1></a>
 
-
+<div style="margin-left:10px;">
 <form method="post">{% csrf_token %}
     {{ form.media }}
     {{ form.as_p }}
@@ -17,3 +17,4 @@
     <button type="Сохранить" value="Сохранить" class="btn btn-success">Сохранить</button>
       </div>
 </form>
+    </div>

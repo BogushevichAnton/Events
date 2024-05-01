@@ -10,11 +10,14 @@
 <a href="/" style="text-align: center; text-decoration: none;"><h1>На главную</h1></a>
 
 <div style="margin-left:10px;">
-<form method="post">{% csrf_token %}
-    {{ form.media }}
-    {{ form.as_p }}
-      <div style="text-align:center;">
-    <button type="Сохранить" value="Сохранить" class="btn btn-success">Сохранить</button>
-      </div>
-</form>
-    </div>
+    <form method="post" novalidate>{% csrf_token %}
+        {{ form.media }}
+
+        {{ form.as_p }}
+                        {{ form.non_field_errors }}
+
+        <div style="text-align:center;">
+            <button type="Сохранить" value="Сохранить" class="btn btn-success">Сохранить</button>
+        </div>
+    </form>
+</div>
